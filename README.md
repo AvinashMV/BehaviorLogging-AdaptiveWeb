@@ -4,9 +4,9 @@
 
 What is this project is about?
 
-Adaptive web project. After securly logged in to the system, each user is displayed a static page of stackoverflow. User intereactions on the page (behavior) is captured and it is displayed as visualizaiton. Currently this project tracks "Search" ,"Scroll" and "AskQuestion" in the stackOverflow page. 
+Adaptive web project. After securly logged in to the system, each user is displayed a static page of stackoverflow. User intereactions on the page (behavior) is captured and it is displayed as visualizaiton. Currently this project tracks "Search" ,"Scroll" and "AskQuestion" in the stackOverflow page.  Visualization is done using simple chart.js
 
-Implemented using - node.js, express.js, handlebars, mongodb, JavaScript ES6, HTML5, CSS3, Bootstrap 4, REST APIs.  
+Implemented using - node.js, express.js, handlebars, mongodb, JavaScript ES6, HTML5, CSS3, Bootstrap 4, REST APIs, chart.js. 
 
 
 Instructions to execute ( on mac)
