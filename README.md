@@ -1,6 +1,14 @@
 # BehaviorLogging-AdaptiveWeb
 
 
+
+What is this project is about?
+
+Adaptive web project. After securly logged in to the system, each user is displayed a static page of stackoverflow. User intereactions on the page (behavior) is captured and it is displayed as visualizaiton. Currently this project tracks "Search" ,"Scroll" and "AskQuestion" in the stackOverflow page. 
+
+Implemented using - node.js, express.js, handlebars, mongodb, JavaScript ES6, HTML5, CSS3, Bootstrap 4, REST APIs.  
+
+
 Instructions to execute ( on mac)
 
 1.	Required Dependencies - node.js , chrome v8, mongo - DB. 
@@ -11,13 +19,6 @@ Instructions to execute ( on mac)
 	Inside the terminal navigate to ~/mongo/bin.  From bin directory run the command  		
 	./mongod - - dbpath ~/mongo-data.
 5.	In chrome type - http://localhost:3000/
-
-
-
-What is this project is about?
-
-Adaptive web project. After securly logged in to the system, each user is displayed a static page of stackoverflow. User intereactions on the page (behavior) is captured and it is displayed as visualizaiton. Currently this project tracks "Search" , "Scroll" and "AskQuestion" in the stackOverflow page. 
-
 
 
 Features of the Project: 
