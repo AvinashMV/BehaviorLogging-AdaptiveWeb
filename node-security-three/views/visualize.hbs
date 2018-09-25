@@ -1,0 +1,222 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+<section class="section1">
+    <div class="container">
+        <canvas id="myChart1"></canvas>
+    </div>
+</section>
+
+<section class="section2">
+    <div class="container">
+        <canvas id="myChart2"></canvas>
+    </div>
+</section>
+
+
+<section class="section3">
+    <div class="container">
+        <canvas id="myChart3"></canvas>
+    </div>
+</section>
+
+<section class="container content">
+    <h3> Patterns and Analysis</h3>
+    <p class="text-justify"> First Bar graph represents the <b><u> Ask Question </u> </b> frequency count. It is usually the moderate frequency that means
+        user won't hit ask question frequently. It is important because when stackover flow is a platform where some tricky and tough question
+        can be found answers.
+    </p>
+
+    <p class="text-justify"> Second Bar graph represents the <strong><u> Search </u> </strong> frequency count. It is the most used feature. That means an average user
+        uses it more. Which suggests that answers written is of great value and help to others.It search also gives related questions in the form of
+        tag which can be most helpful to users to find the related answers
+    </p>
+
+    <p class="text-justify"> Third Bar graph represents the <strong> <u> Scroll  </u> </strong> frequency count. It is also high value here which means that user used it
+        to search various answers written in the page. Which also suggests that there are more than one good answer and they are documented in
+        detail.It matters because say some user didn't scroll , that means user didn't find any conviencing answers so user left the page.
+    </p>
+</section>
+
+
+<script>
+
+    {{log questionDay}}
+    {{log questionCount}}
+
+    var questionDay_p = ("{{questionDay}}".trim()).split(" ") ;
+    var questionCount_p = ("{{questionCount}}".trim()).split(" ").map(function(x){return parseInt(x)});
+
+    console.log(questionDay_p);
+    console.log(questionCount_p);
+
+    var searchDay_p = ("{{searchDay}}".trim()).split(" ") ;
+    var searchCount_p = ("{{searchCount}}".trim()).split(" ").map(function(x){return parseInt(x)});
+
+    var scrollDay_p =  ("{{scrollDay}}".trim()).split(" ") ;
+    var scrollCount_p = ("{{scrollCount}}".trim()).split(" ").map(function(x){return parseInt(x)});
+
+
+    let myChart1 = document.getElementById('myChart1').getContext('2d');
+    let myChart2 = document.getElementById('myChart2').getContext('2d');
+    let myChart3 = document.getElementById('myChart3').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart1 = new Chart(myChart1, {
+        type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        data:{
+            labels: questionDay_p,
+            datasets:[{
+                label:'Day Count',
+                data: questionCount_p,
+                backgroundColor:'#ffc388',
+                /*backgroundColor:[
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6)',
+                    'rgba(255, 99, 132, 0.6)'
+                ],*/
+                borderWidth:1,
+                borderColor:'#777',
+                hoverBorderWidth:3,
+                hoverBorderColor:'#000'
+            }]
+        },
+        options:{
+            title:{
+                display:true,
+                text:'Ask Question Frequency',
+                fontSize:25
+            },
+            legend:{
+                display:true,
+                position:'right',
+                labels:{
+                    fontColor:'#000'
+                }
+            },
+            layout:{
+                padding:{
+                    left:50,
+                    right:0,
+                    bottom:0,
+                    top:0
+                }
+            },
+            tooltips:{
+                enabled:true
+            }
+        }
+    });
+
+
+
+
+    let massPopChart2 = new Chart(myChart2, {
+        type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        data:{
+            labels: searchDay_p,
+            datasets:[{
+                label:'Day Count',
+                data: searchCount_p,
+                backgroundColor:'#bbffbb',
+                /*backgroundColor:[
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6)',
+                    'rgba(255, 99, 132, 0.6)'
+                ],*/
+                borderWidth:1,
+                borderColor:'#777',
+                hoverBorderWidth:3,
+                hoverBorderColor:'#000'
+            }]
+        },
+        options:{
+            title:{
+                display:true,
+                text:'Search Frequency',
+                fontSize:25
+            },
+            legend:{
+                display:true,
+                position:'right',
+                labels:{
+                    fontColor:'#000'
+                }
+            },
+            layout:{
+                padding:{
+                    left:50,
+                    right:0,
+                    bottom:0,
+                    top:0
+                }
+            },
+            tooltips:{
+                enabled:true
+            }
+        }
+    });
+
+
+    let massPopChart3 = new Chart(myChart3, {
+        type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        data:{
+            labels: scrollDay_p,
+            datasets:[{
+                label:'Day Count',
+                data: scrollCount_p,
+                //backgroundColor:'green',
+                backgroundColor:[
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6)',
+                    'rgba(255, 99, 132, 0.6)'
+                ],
+                borderWidth:1,
+                borderColor:'#777',
+                hoverBorderWidth:3,
+                hoverBorderColor:'#000'
+            }]
+        },
+        options:{
+            title:{
+                display:true,
+                text:'Scroll Frequency',
+                fontSize:25
+            },
+            legend:{
+                display:true,
+                position:'right',
+                labels:{
+                    fontColor:'#000'
+                }
+            },
+            layout:{
+                padding:{
+                    left:50,
+                    right:0,
+                    bottom:0,
+                    top:0
+                }
+            },
+            tooltips:{
+                enabled:true
+            }
+        }
+    });
+
+</script>

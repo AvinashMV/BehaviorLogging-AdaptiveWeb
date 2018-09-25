@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lato','Arial',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+body{
+    background-image:linear-gradient(rgba(20, 20, 20, 0.45),rgba(20, 20, 20, 0.45)), url(../images/loginImage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+h1,h2,h3{
+    letter-spacing: 4px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.formContent{
+    color: #fff;
+    font-size: 120%;
+    margin: 10% auto 25% auto;
+    font-weight: 100;
+    width: 60%;
+}
+
+form{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    font-size: 80%;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.formContent input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    width: 60%;
+}
+
+.btn-custom{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5%;
+    margin-left: 40%;
+    width: 20%;
+    // margin-right: auto;
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-custom:hover{
+    color: #000;
+    background-color: #fa5;
+}
+
+.hr{
+    background-color:#fa5;
+    height: 2px;
+}
+
+/*------------------------------------------------ For Member Page------------------------------------ */
+
+.memberWelcomeMessage {
+    color: #fff;
+    font-size: 120%;
+    margin: 4% auto 0px auto;
+    font-weight: 100;
+    width: 60%;
+}
+
+.loginHistoryBlock {
+    background-image: linear-gradient(rgba(0,0,0,0.27),rgba(0,0,0,0.27));
+    width: 100%;
+
+}
+
+.memberMainContentBlock{
+    margin-top: 5%;
+}

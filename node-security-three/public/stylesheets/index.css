@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato','Arial',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.32),rgba(0, 0, 0, 0.32)) , url(../images/index.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+}
+
+h1{
+    font-weight: 100;
+    font-size: 250%;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    color:white;
+}
+
+.mainContent{
+    margin-top: 20%;
+    font-size: 80%;
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+
+}
+
+.subrows{
+    margin-top: 5%;
+
+}
+
+.hr{
+    background-color:#fa5;
+    height: 2px;
+}

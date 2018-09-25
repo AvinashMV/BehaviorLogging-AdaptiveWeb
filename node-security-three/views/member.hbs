@@ -1,0 +1,14 @@
+<section class="container memberWelcomeMessage">
+    <h1> Welcome aboard {{username}} </h1>
+    <hr class="hr">
+
+    <div class="container clearfix memberMainContentBlock">
+        <p class="pleftAligned text-uppercase"> Here is your login history </p>
+        <div class="container pre-scrollable text-center float-right loginHistoryBlock">
+            {{#each history}}
+                <p class="text-center"> {{this}} </p>
+            {{/each}}
+        </div>
+    </div>
+
+</section>
